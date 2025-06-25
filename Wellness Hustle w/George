@@ -1,0 +1,58 @@
+from docx import Document
+from docx.shared import Pt, RGBColor
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+
+# Create the document
+doc = Document()
+doc.add_heading('YouTube Channel Growth Offer – Wellness Hustle w/ George', 0)
+
+# Section 1: Shorts/TikTok Script
+doc.add_heading('1. YouTube Shorts / TikTok Script', level=1)
+script = (
+    "Hey Wellness Creators! 👋\n"
+    "Ako si George from *Wellness Hustle* — at gusto kitang tanungin:\n\n"
+    "Ginagawa mo na ang lahat sa channel mo… pero bakit parang walang views? 😩\n"
+    "Don’t worry — hindi mo kasalanan.\n\n"
+    "As a content strategist, may nakita akong 16 critical mistakes sa karamihan ng wellness YouTube channels —\n"
+    "At once na naayos ‘yan, BOOM 💥 —\n"
+    "Mas maraming views, mas maraming subscribers, at oo — mas malaking kita.\n\n"
+    "Kung gusto mong malaman kung ano ang mga ‘yun at paano ito ayusin,\n"
+    "Comment “READY” below or DM me “Audit” and I’ll send you the full breakdown — libre ‘to! 🚀\n\n"
+    "Let’s grow your wellness hustle — together."
+)
+doc.add_paragraph(script)
+
+# Section 2: Instagram Caption / TikTok Caption
+doc.add_heading('2. Instagram / TikTok Caption or Comment', level=1)
+caption = (
+    "⚠️ Wellness Creators: Kung nahihirapan ang YouTube mo sa views at subscribers, baka ito ang dahilan.\n\n"
+    "May nakita akong 16 common mistakes na ginagawa ng halos lahat ng wellness YouTubers — kaya hindi lumalago ang channel nila kahit may effort at value.\n\n"
+    "Good news? Puwede pa ‘yang ayusin.\n\n"
+    "💬 Comment “READY” or DM me “Audit” at padadalhan kita ng free strategy breakdown na nakatulong sa’kin makuha ang 100K subs in 12 videos.\n\n"
+    "Let’s grow your Wellness Hustle w/ George way. 💪🌿"
+)
+doc.add_paragraph(caption)
+
+# Section 3: Email Pitch Version
+doc.add_heading('3. Email Pitch Version', level=1)
+email_subject = "Subject Line: 16 Mistakes Killing Your Channel (And How To Fix Them)"
+email_body = (
+    "Hi [First Name],\n\n"
+    "I'm George from Wellness Hustle, and I help creators in the wellness space turn their YouTube passion into profit.\n\n"
+    "I came across your content and can see the effort you're putting in — but I also noticed some common patterns holding your growth back.\n\n"
+    "In fact, there are 16 mistakes I’ve identified that are stopping channels from blowing up with views, subscribers, and income.\n\n"
+    "Here’s the good news:\n"
+    "Once you fix these, you’ll start seeing real results — just like I did, when I reached 100,000 subscribers with only 12 videos.\n\n"
+    "Want the free breakdown?\n\n"
+    "Just reply to this email with “Send the audit” — and I’ll share the full strategy.\n\n"
+    "Let’s build your Wellness Hustle — the smart way.\n"
+    "— George"
+)
+doc.add_paragraph(email_subject)
+doc.add_paragraph(email_body)
+
+# Save the document
+file_path = "/mnt/data/Wellness_Hustle_Channel_Audit_Pitch.docx"
+doc.save(file_path)
+
+file_path
